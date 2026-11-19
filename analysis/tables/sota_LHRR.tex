@@ -1,0 +1,45 @@
+% gerado por analysis/make_tables.py -- nao editar a mao
+\begin{table*}[t]
+\centering
+\caption{Accuracy (\%) with LHRR ranked lists, averaged over descriptors and GCNs (54 configurations). Avg.: mean accuracy; Rank: mean rank over configurations (lower is better); best in bold. The last block (switch rule of the TCM authors) was chosen after the main results.}
+\label{tab:sota-lhrr}
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Flowers-17} & \multicolumn{3}{c}{Corel5k} & \multicolumn{3}{c}{CUB-200} & & \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+Method & \multicolumn{1}{c}{2\%} & \multicolumn{1}{c}{5\%} & \multicolumn{1}{c}{10\%} & \multicolumn{1}{c}{2\%} & \multicolumn{1}{c}{5\%} & \multicolumn{1}{c}{10\%} & \multicolumn{1}{c}{2\%} & \multicolumn{1}{c}{5\%} & \multicolumn{1}{c}{10\%} & \multicolumn{1}{c}{Avg.} & \multicolumn{1}{c}{Rank} \\
+\midrule
+\multicolumn{12}{l}{\textit{Reference}} \\
+\quad Random & 75.0 & 90.9 & 93.4 & 77.9 & 93.8 & 95.3 & 45.8 & 62.5 & 68.7 & 78.15 & 17.0 \\
+\quad Margin~\cite{scheffer2001active} & 85.3 & 93.1 & 94.3 & 84.5 & 94.6 & 96.3 & 44.7 & 60.8 & 68.2 & 80.18 & 13.6 \\
+\multicolumn{12}{l}{\textit{Coverage (whole budget)}} \\
+\quad ProbCover~\cite{yehuda2022active} & 79.9 & 89.4 & 93.6 & 80.9 & 94.5 & 95.8 & 52.3 & 65.3 & 69.7 & 80.14 & 14.5 \\
+\quad TypiClust~\cite{hacohen2022active} & 92.5 & 93.3 & 93.0 & 94.5 & 95.6 & 95.7 & 63.9 & 69.1 & 70.5 & 85.35 & 7.1 \\
+\quad MaxHerding~\cite{bae2024generalized} & \textbf{92.6} & 93.2 & 93.6 & 94.7 & 95.6 & 95.7 & \textbf{65.5} & 68.8 & 69.8 & 85.50 & 7.6 \\
+\quad Rank-ProbCover & 84.0 & 92.6 & 93.9 & 88.8 & 94.8 & 95.4 & 55.3 & 63.9 & 67.7 & 81.81 & 14.6 \\
+\multicolumn{12}{l}{\textit{Graph AL (whole budget)}} \\
+\quad RIM~\cite{zhang2021rim} & 89.2 & 90.1 & 92.9 & 92.8 & 94.1 & 95.5 & 58.7 & 62.2 & 67.6 & 82.57 & 12.8 \\
+\quad RIM (median $\theta$)~\cite{zhang2021rim} & 90.1 & 90.4 & 92.7 & 92.0 & 93.5 & 95.0 & 60.3 & 63.5 & 66.5 & 82.66 & 14.5 \\
+\quad Grain~\cite{zhang2021grain} & 87.5 & 90.4 & 93.2 & 91.5 & 93.8 & 95.4 & 55.1 & 60.8 & 67.1 & 81.64 & 15.5 \\
+\multicolumn{12}{l}{\textit{Random start + query}} \\
+\quad CoreSet~\cite{sener2017active} & 81.7 & 92.0 & 93.2 & 80.2 & 93.4 & 95.3 & 42.8 & 60.3 & 67.3 & 78.47 & 17.5 \\
+\quad Information density~\cite{settles2008analysis} & 85.0 & 93.1 & 94.2 & 80.0 & 94.7 & 96.3 & 39.6 & 58.6 & 68.3 & 78.86 & 14.0 \\
+\quad AGE~\cite{cai2017active} & 73.1 & 91.3 & 93.3 & 73.1 & 92.6 & 95.2 & 41.7 & 59.8 & 67.9 & 76.45 & 18.7 \\
+\multicolumn{12}{l}{\textit{Coverage + query}} \\
+\quad TCM ($B/2$ switch)~\cite{doucet2024bridging} & 89.6 & 93.7 & 94.3 & 91.5 & 95.9 & 96.4 & 54.6 & 67.2 & 70.7 & 83.78 & 8.0 \\
+\quad DCoM~\cite{mishal2024dcom} & 90.3 & 93.1 & 94.1 & 89.8 & 95.3 & 96.4 & 53.5 & 65.4 & 69.8 & 83.07 & 9.5 \\
+\quad MaxHerding + margin & 88.3 & 93.7 & 94.4 & 92.6 & 95.9 & 96.4 & 54.2 & 68.0 & 70.7 & 83.81 & 7.7 \\
+\quad Rank-ProbCover + margin & 84.1 & 92.9 & 94.8 & 89.2 & 95.5 & 96.4 & 47.2 & 63.7 & 68.5 & 81.36 & 11.6 \\
+\multicolumn{12}{l}{\textit{Influence (ours)}} \\
+\quad Random + influence & 92.3 & 94.0 & 94.7 & 92.4 & 96.0 & \textbf{96.5} & 58.9 & 67.1 & 70.9 & 84.75 & 6.6 \\
+\quad Rank-ProbCover + influence & 89.8 & 94.0 & \textbf{94.9} & \textbf{95.3} & 95.9 & \textbf{96.5} & 59.9 & 67.4 & 71.1 & 84.98 & 5.9 \\
+\quad TypiClust + influence & 92.4 & \textbf{94.4} & \textbf{94.9} & 95.2 & \textbf{96.3} & \textbf{96.5} & 64.0 & 69.7 & \textbf{71.7} & \textbf{86.12} & \textbf{3.6} \\
+\quad MaxHerding + influence & 91.4 & \textbf{94.4} & 94.7 & 94.9 & 96.1 & \textbf{96.5} & 62.3 & \textbf{69.8} & \textbf{71.7} & 85.76 & 4.4 \\
+\multicolumn{12}{l}{\textit{Switch rule of the TCM authors (post hoc)}} \\
+\quad TCM (authors' rule)~\cite{doucet2024bridging} & 92.5 & 92.6 & 94.1 & 94.5 & 95.6 & 96.4 & 63.9 & 69.1 & 70.7 & 85.48 & 6.2 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

@@ -1,0 +1,21 @@
+% gerado por analysis/make_tables.py -- nao editar a mao
+\begin{table}[t]
+\centering
+\caption{Ablation (exploratory): accuracy difference to the full method over 18 configurations (3 datasets $\times$ ResNet-152, ViT-B/16 $\times$ GCN $\times$ 3 budgets), with MaxHerding as cold start; W/L: configurations in which the variant is better/worse. $^{*}p<0.05$, $^{**}p<0.01$ (Wilcoxon).}
+\label{tab:ablation}
+\footnotesize
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lrrr}
+\toprule
+Variant & $\Delta$ & W/L & $\Delta$ (LHRR) \\
+\midrule
+Margin instead of influence & -1.05$^{**}$ & 2/16 & -2.37$^{**}$ \\
+No greedy discount & -0.70$^{**}$ & 0/18 & -- \\
+No position weight ($\rho=1$) & -0.11 & 6/12 & -0.13$^{*}$ \\
+No own doubt & -0.56$^{**}$ & 2/16 & -- \\
+No neighbor doubt & -0.45$^{**}$ & 3/15 & -- \\
+Inductive (test doubt ignored) & -0.16$^{*}$ & 6/12 & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

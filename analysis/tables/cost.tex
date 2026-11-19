@@ -1,0 +1,33 @@
+% gerado por analysis/make_tables.py -- nao editar a mao
+\begin{table}[t]
+\centering
+\caption{Selection time in seconds with a 10\% budget (median of three runs, one NVIDIA RTX 2080 Ti), excluding the training of the GCN, shown for reference.}
+\label{tab:cost}
+\footnotesize
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lrr}
+\toprule
+Method & Corel5k & CUB-200 \\
+\midrule
+\multicolumn{3}{l}{\textit{Cold start (250 / 589 picks)}} \\
+\quad Random & $<$0.01 & $<$0.01 \\
+\quad Rank-ProbCover & 0.14 & 0.64 \\
+\quad ProbCover~\cite{yehuda2022active} & 0.10 & 0.32 \\
+\quad DCoM~\cite{mishal2024dcom} & 0.17 & 0.47 \\
+\quad MaxHerding~\cite{bae2024generalized} & 0.24 & 2.23 \\
+\quad RIM~\cite{zhang2021rim} & 0.63 & 3.37 \\
+\quad Grain~\cite{zhang2021grain} & 1.08 & 5.21 \\
+\quad TypiClust~\cite{hacohen2022active} & 34.88 & 146.43 \\
+\multicolumn{3}{l}{\textit{One query round (50 / 117 picks)}} \\
+\quad Margin~\cite{scheffer2001active} & $<$0.01 & 0.02 \\
+\quad CoreSet~\cite{sener2017active} & 0.01 & 0.03 \\
+\quad \textbf{Influence (ours)} & 0.02 & 0.10 \\
+\quad Information density~\cite{settles2008analysis} & 0.08 & 0.19 \\
+\quad DCoM~\cite{mishal2024dcom} & 0.25 & 0.98 \\
+\quad AGE~\cite{cai2017active} & 0.35 & 4.38 \\
+\multicolumn{3}{l}{\textit{Reference}} \\
+\quad One GCN training & 1.12 & 2.11 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

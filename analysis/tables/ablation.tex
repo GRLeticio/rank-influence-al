@@ -1,0 +1,29 @@
+% gerado por analysis/make_tables.py -- nao editar a mao
+\begin{table}[t]
+\centering
+\caption{Ablation and sensitivity (exploratory): accuracy difference to the full method ($k=20$, $\rho=0.9$, $R=5$) over 18 configurations (3 datasets $\times$ ResNet-152, ViT-B/16 $\times$ GCN $\times$ 3 budgets), with MaxHerding as cold start. $^{*}p<0.05$, $^{**}p<0.01$ (Wilcoxon).}
+\label{tab:ablation}
+\footnotesize
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lrrr}
+\toprule
+Variant & $\Delta$ & W/L & $\Delta$ (LHRR) \\
+\midrule
+Margin instead of influence & -1.05$^{**}$ & 2/16 & -2.37$^{**}$ \\
+No greedy discount & -0.70$^{**}$ & 0/18 & -- \\
+No position weight ($\rho=1$) & -0.11 & 6/12 & -0.13$^{*}$ \\
+No own doubt & -0.56$^{**}$ & 2/16 & -- \\
+No neighbor doubt & -0.45$^{**}$ & 3/15 & -- \\
+Inductive (test doubt ignored) & -0.16$^{*}$ & 6/12 & -- \\
+\midrule
+$k=10$ & +0.03 & 10/8 & -- \\
+$k=40$ & +0.00 & 9/9 & -- \\
+$\rho=0.5$ & +0.37$^{**}$ & 15/3 & -- \\
+$\rho=0.7$ & +0.30$^{**}$ & 16/2 & -- \\
+$\rho=0.8$ & +0.22$^{*}$ & 14/4 & -- \\
+$R=1$ round & -0.06 & 7/11 & -- \\
+$R=10$ rounds & -0.11 & 6/12 & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

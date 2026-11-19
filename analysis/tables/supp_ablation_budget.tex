@@ -1,0 +1,26 @@
+% gerado por analysis/make_supp_tables.py -- nao editar a mao
+\begin{table}[t]
+\centering
+\caption{Ablation and sensitivity by budget: accuracy difference to the full method (MaxHerding cold start, original lists; 6 configurations per budget, 18 in total). The last column repeats the main text, with the Wilcoxon test over the 18 configurations.}
+\label{tab:supp-ablation-budget}
+\footnotesize
+\begin{tabular}{lrrrr}
+\toprule
+Variant & 2\% & 5\% & 10\% & All \\
+\midrule
+Margin instead of influence & -2.33 & -0.69 & -0.13 & -1.05$^{**}$ \\
+No greedy discount & -1.15 & -0.55 & -0.40 & -0.70$^{**}$ \\
+No position weight ($\rho=1$) & -0.05 & -0.15 & -0.14 & -0.11 \\
+No own doubt & -0.25 & -0.64 & -0.79 & -0.56$^{**}$ \\
+No neighbor doubt & -0.72 & -0.27 & -0.35 & -0.45$^{**}$ \\
+Inductive (test doubt ignored) & +0.09 & -0.24 & -0.33 & -0.16$^{*}$ \\
+$k=10$ & +0.12 & +0.08 & -0.12 & +0.03 \\
+$k=40$ & +0.03 & -0.11 & +0.07 & +0.00 \\
+$\rho=0.5$ & +0.45 & +0.41 & +0.23 & +0.37$^{**}$ \\
+$\rho=0.7$ & +0.57 & +0.23 & +0.09 & +0.30$^{**}$ \\
+$\rho=0.8$ & +0.61 & +0.04 & +0.03 & +0.22$^{*}$ \\
+$R=1$ & -0.27 & +0.15 & -0.07 & -0.06 \\
+$R=10$ & +0.00 & -0.13 & -0.21 & -0.11 \\
+\bottomrule
+\end{tabular}
+\end{table}

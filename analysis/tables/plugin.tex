@@ -1,0 +1,21 @@
+% gerado por analysis/make_tables.py -- nao editar a mao
+\begin{table}[t]
+\centering
+\caption{Influence query vs.\ margin after the same cold start: mean accuracy difference (points) over configurations (Original: 54, LHRR: 54, UMAP: 54) and wins/losses. Wilcoxon signed-rank test: $^{*}p<0.05$, $^{**}p<0.01$.}
+\label{tab:plugin}
+\footnotesize
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{2}{c}{Original} & \multicolumn{2}{c}{LHRR} & \multicolumn{2}{c}{UMAP} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Cold start & $\Delta$ & W/L & $\Delta$ & W/L & $\Delta$ & W/L \\
+\midrule
+Random & +2.32$^{**}$ & 50/2 & +4.57$^{**}$ & 47/7 & +3.29$^{**}$ & 45/3 \\
+Rank-ProbCover & +1.81$^{**}$ & 50/2 & +3.62$^{**}$ & 47/7 & +2.69$^{**}$ & 48/2 \\
+TypiClust & +1.14$^{**}$ & 45/7 & +2.34$^{**}$ & 48/6 & +1.30$^{**}$ & 46/3 \\
+MaxHerding & +1.04$^{**}$ & 49/3 & +1.95$^{**}$ & 47/7 & +1.10$^{**}$ & 44/3 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

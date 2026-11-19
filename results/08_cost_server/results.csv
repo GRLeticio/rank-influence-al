@@ -1,0 +1,31 @@
+dataset,peca,metodo,n_escolhas,segundos,maquina
+cub200,1,sorteio,589,0.000,node47 | GeForce RTX 2080 Ti
+cub200,1,TypiClust (oficial),589,146.428,node47 | GeForce RTX 2080 Ti
+cub200,1,ProbCover (oficial),589,0.319,node47 | GeForce RTX 2080 Ti
+cub200,1,MaxHerding (fiel),589,2.230,node47 | GeForce RTX 2080 Ti
+cub200,1,Rank-ProbCover (nosso),589,0.635,node47 | GeForce RTX 2080 Ti
+cub200,1,RIM,589,3.369,node47 | GeForce RTX 2080 Ti
+cub200,1,Grain,589,5.205,node47 | GeForce RTX 2080 Ti
+cub200,1,DCoM (inicial),589,0.472,node47 | GeForce RTX 2080 Ti
+cub200,2,margem,117,0.016,node47 | GeForce RTX 2080 Ti
+cub200,2,information density,117,0.193,node47 | GeForce RTX 2080 Ti
+cub200,2,"CoreSet (oficial, embeddings)",117,0.030,node47 | GeForce RTX 2080 Ti
+cub200,2,AGE (oficial),117,4.380,node47 | GeForce RTX 2080 Ti
+cub200,2,"DCoM (rodada, com deltas)",117,0.985,node47 | GeForce RTX 2080 Ti
+cub200,2,influencia por rank (nossa),117,0.102,node47 | GeForce RTX 2080 Ti
+cub200,0,(referencia) 1 treino da GCN-Net,0,2.108,node47 | GeForce RTX 2080 Ti
+corel5k,1,sorteio,250,0.000,node47 | GeForce RTX 2080 Ti
+corel5k,1,TypiClust (oficial),250,34.878,node47 | GeForce RTX 2080 Ti
+corel5k,1,ProbCover (oficial),250,0.103,node47 | GeForce RTX 2080 Ti
+corel5k,1,MaxHerding (fiel),250,0.236,node47 | GeForce RTX 2080 Ti
+corel5k,1,Rank-ProbCover (nosso),250,0.141,node47 | GeForce RTX 2080 Ti
+corel5k,1,RIM,250,0.627,node47 | GeForce RTX 2080 Ti
+corel5k,1,Grain,250,1.079,node47 | GeForce RTX 2080 Ti
+corel5k,1,DCoM (inicial),250,0.173,node47 | GeForce RTX 2080 Ti
+corel5k,2,margem,50,0.002,node47 | GeForce RTX 2080 Ti
+corel5k,2,information density,50,0.076,node47 | GeForce RTX 2080 Ti
+corel5k,2,"CoreSet (oficial, embeddings)",50,0.012,node47 | GeForce RTX 2080 Ti
+corel5k,2,AGE (oficial),50,0.348,node47 | GeForce RTX 2080 Ti
+corel5k,2,"DCoM (rodada, com deltas)",50,0.251,node47 | GeForce RTX 2080 Ti
+corel5k,2,influencia por rank (nossa),50,0.024,node47 | GeForce RTX 2080 Ti
+corel5k,0,(referencia) 1 treino da GCN-Net,0,1.125,node47 | GeForce RTX 2080 Ti

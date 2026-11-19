@@ -1,0 +1,46 @@
+% gerado por analysis/make_tables.py -- nao editar a mao
+\begin{table*}[t]
+\centering
+\caption{Accuracy (\%) with UMAP ranked lists, averaged over descriptors and GCNs (54 configurations). Avg.: mean accuracy; Rank: mean rank over configurations (lower is better); best in bold. $\pm$: std.\ over the 10 splits, averaged over each cell. The last block (switch rule of the TCM authors) was chosen after the main results.}
+\label{tab:sota-umap-std}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Flowers-17} & \multicolumn{3}{c}{Corel5k} & \multicolumn{3}{c}{CUB-200} & & \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+Method & \multicolumn{1}{c}{2\%} & \multicolumn{1}{c}{5\%} & \multicolumn{1}{c}{10\%} & \multicolumn{1}{c}{2\%} & \multicolumn{1}{c}{5\%} & \multicolumn{1}{c}{10\%} & \multicolumn{1}{c}{2\%} & \multicolumn{1}{c}{5\%} & \multicolumn{1}{c}{10\%} & \multicolumn{1}{c}{Avg.} & \multicolumn{1}{c}{Rank} \\
+\midrule
+\multicolumn{12}{l}{\textit{Reference}} \\
+\quad Random & 76.8{\scriptsize$\pm$6.8} & 92.8{\scriptsize$\pm$2.6} & 94.6{\scriptsize$\pm$1.4} & 78.2{\scriptsize$\pm$3.8} & 94.1{\scriptsize$\pm$1.5} & 95.4{\scriptsize$\pm$0.8} & 45.3{\scriptsize$\pm$1.7} & 60.7{\scriptsize$\pm$1.3} & 66.4{\scriptsize$\pm$1.0} & 78.24{\scriptsize$\pm$2.3} & 17.6 \\
+\quad Margin~\cite{scheffer2001active} & 88.6{\scriptsize$\pm$3.8} & 94.4{\scriptsize$\pm$1.1} & 95.1{\scriptsize$\pm$0.8} & 81.3{\scriptsize$\pm$3.2} & 95.1{\scriptsize$\pm$1.3} & 96.3{\scriptsize$\pm$0.6} & 44.1{\scriptsize$\pm$1.4} & 58.0{\scriptsize$\pm$1.2} & 65.8{\scriptsize$\pm$1.0} & 79.86{\scriptsize$\pm$1.6} & 14.1 \\
+\multicolumn{12}{l}{\textit{Coverage (whole budget)}} \\
+\quad ProbCover~\cite{yehuda2022active} & 81.0{\scriptsize$\pm$0.6} & 90.6{\scriptsize$\pm$3.9} & 94.6{\scriptsize$\pm$1.5} & 80.8{\scriptsize$\pm$1.7} & 94.8{\scriptsize$\pm$1.0} & 95.9{\scriptsize$\pm$0.6} & 51.6{\scriptsize$\pm$1.3} & 63.3{\scriptsize$\pm$1.1} & 67.1{\scriptsize$\pm$0.9} & 79.96{\scriptsize$\pm$1.4} & 14.8 \\
+\quad TypiClust~\cite{hacohen2022active} & \textbf{93.4}{\scriptsize$\pm$1.4} & 94.1{\scriptsize$\pm$1.4} & 94.8{\scriptsize$\pm$1.3} & 94.4{\scriptsize$\pm$0.8} & 96.0{\scriptsize$\pm$0.7} & 96.0{\scriptsize$\pm$0.6} & 62.8{\scriptsize$\pm$0.9} & 66.9{\scriptsize$\pm$0.8} & 68.1{\scriptsize$\pm$0.8} & 85.17{\scriptsize$\pm$1.0} & 7.1 \\
+\quad MaxHerding~\cite{bae2024generalized} & 93.1{\scriptsize$\pm$1.8} & 94.2{\scriptsize$\pm$1.2} & 94.9{\scriptsize$\pm$1.3} & 94.4{\scriptsize$\pm$1.0} & 95.8{\scriptsize$\pm$0.6} & 96.0{\scriptsize$\pm$0.7} & \textbf{64.0}{\scriptsize$\pm$0.9} & 66.7{\scriptsize$\pm$0.8} & 67.3{\scriptsize$\pm$0.7} & 85.16{\scriptsize$\pm$1.0} & 8.2 \\
+\quad Rank-ProbCover & 80.7{\scriptsize$\pm$4.2} & 93.8{\scriptsize$\pm$1.5} & 94.7{\scriptsize$\pm$1.2} & 86.2{\scriptsize$\pm$1.8} & 94.5{\scriptsize$\pm$0.8} & 95.7{\scriptsize$\pm$0.7} & 49.6{\scriptsize$\pm$1.2} & 64.2{\scriptsize$\pm$1.0} & 67.3{\scriptsize$\pm$0.8} & 80.73{\scriptsize$\pm$1.5} & 14.2 \\
+\multicolumn{12}{l}{\textit{Graph AL (whole budget)}} \\
+\quad RIM~\cite{zhang2021rim} & 90.6{\scriptsize$\pm$1.2} & 92.5{\scriptsize$\pm$1.5} & 94.6{\scriptsize$\pm$1.2} & 92.2{\scriptsize$\pm$0.9} & 94.2{\scriptsize$\pm$0.9} & 95.4{\scriptsize$\pm$0.8} & 56.9{\scriptsize$\pm$1.0} & 61.7{\scriptsize$\pm$0.9} & 66.1{\scriptsize$\pm$0.7} & 82.68{\scriptsize$\pm$1.0} & 13.8 \\
+\quad RIM (median $\theta$)~\cite{zhang2021rim} & 92.5{\scriptsize$\pm$1.3} & 93.3{\scriptsize$\pm$1.0} & 94.3{\scriptsize$\pm$1.3} & 94.6{\scriptsize$\pm$0.9} & 94.7{\scriptsize$\pm$0.8} & 95.7{\scriptsize$\pm$0.7} & 60.6{\scriptsize$\pm$1.1} & 62.9{\scriptsize$\pm$1.2} & 66.4{\scriptsize$\pm$0.9} & 83.89{\scriptsize$\pm$1.0} & 11.8 \\
+\quad Grain~\cite{zhang2021grain} & 90.9{\scriptsize$\pm$2.3} & 92.9{\scriptsize$\pm$2.0} & 94.6{\scriptsize$\pm$1.5} & 91.8{\scriptsize$\pm$1.7} & 94.2{\scriptsize$\pm$1.3} & 95.5{\scriptsize$\pm$0.7} & 55.1{\scriptsize$\pm$0.9} & 61.7{\scriptsize$\pm$1.2} & 66.1{\scriptsize$\pm$0.7} & 82.52{\scriptsize$\pm$1.4} & 14.4 \\
+\multicolumn{12}{l}{\textit{Random start + query}} \\
+\quad CoreSet~\cite{sener2017active} & 89.7{\scriptsize$\pm$2.8} & 93.7{\scriptsize$\pm$1.1} & 94.7{\scriptsize$\pm$0.9} & 87.6{\scriptsize$\pm$2.1} & 94.7{\scriptsize$\pm$0.8} & 95.9{\scriptsize$\pm$0.7} & 51.3{\scriptsize$\pm$1.2} & 62.9{\scriptsize$\pm$0.8} & 66.2{\scriptsize$\pm$0.8} & 81.85{\scriptsize$\pm$1.2} & 13.7 \\
+\quad Information density~\cite{settles2008analysis} & 86.7{\scriptsize$\pm$3.7} & 94.2{\scriptsize$\pm$1.1} & 95.1{\scriptsize$\pm$0.8} & 78.8{\scriptsize$\pm$3.8} & 94.7{\scriptsize$\pm$1.2} & 96.3{\scriptsize$\pm$0.6} & 40.1{\scriptsize$\pm$1.5} & 57.0{\scriptsize$\pm$1.0} & 65.8{\scriptsize$\pm$1.1} & 78.75{\scriptsize$\pm$1.7} & 14.9 \\
+\quad AGE~\cite{cai2017active} & 75.6{\scriptsize$\pm$4.8} & 93.1{\scriptsize$\pm$1.6} & 94.5{\scriptsize$\pm$1.3} & 71.1{\scriptsize$\pm$3.2} & 92.0{\scriptsize$\pm$1.7} & 95.2{\scriptsize$\pm$0.9} & 44.0{\scriptsize$\pm$1.4} & 59.3{\scriptsize$\pm$1.0} & 65.1{\scriptsize$\pm$1.1} & 76.68{\scriptsize$\pm$1.9} & 18.7 \\
+\multicolumn{12}{l}{\textit{Coverage + query}} \\
+\quad TCM ($B/2$ switch)~\cite{doucet2024bridging} & 91.9{\scriptsize$\pm$1.7} & 95.2{\scriptsize$\pm$1.0} & 95.1{\scriptsize$\pm$1.1} & 92.7{\scriptsize$\pm$1.6} & 96.1{\scriptsize$\pm$0.7} & 96.5{\scriptsize$\pm$0.6} & 53.9{\scriptsize$\pm$1.3} & 65.7{\scriptsize$\pm$0.8} & 68.3{\scriptsize$\pm$0.6} & 83.93{\scriptsize$\pm$1.1} & 7.8 \\
+\quad DCoM~\cite{mishal2024dcom} & 92.6{\scriptsize$\pm$1.8} & 94.4{\scriptsize$\pm$1.1} & 95.1{\scriptsize$\pm$1.2} & 90.0{\scriptsize$\pm$2.0} & 95.4{\scriptsize$\pm$0.9} & 96.5{\scriptsize$\pm$0.6} & 52.6{\scriptsize$\pm$1.5} & 63.5{\scriptsize$\pm$1.0} & 67.0{\scriptsize$\pm$0.7} & 83.02{\scriptsize$\pm$1.2} & 9.7 \\
+\quad MaxHerding + margin & 89.8{\scriptsize$\pm$2.9} & 94.8{\scriptsize$\pm$1.1} & \textbf{95.5}{\scriptsize$\pm$1.0} & 93.1{\scriptsize$\pm$1.5} & 96.2{\scriptsize$\pm$0.7} & 96.5{\scriptsize$\pm$0.6} & 54.0{\scriptsize$\pm$1.3} & 66.4{\scriptsize$\pm$0.8} & 68.4{\scriptsize$\pm$0.7} & 83.84{\scriptsize$\pm$1.2} & 6.9 \\
+\quad Rank-ProbCover + margin & 85.8{\scriptsize$\pm$4.7} & 93.9{\scriptsize$\pm$1.7} & 95.1{\scriptsize$\pm$1.1} & 88.3{\scriptsize$\pm$2.6} & 95.1{\scriptsize$\pm$1.1} & 96.3{\scriptsize$\pm$0.6} & 45.8{\scriptsize$\pm$1.4} & 60.8{\scriptsize$\pm$0.8} & 67.4{\scriptsize$\pm$0.7} & 80.95{\scriptsize$\pm$1.6} & 13.1 \\
+\multicolumn{12}{l}{\textit{Influence (ours)}} \\
+\quad Random + influence & 93.1{\scriptsize$\pm$2.2} & 95.1{\scriptsize$\pm$1.2} & 95.3{\scriptsize$\pm$0.8} & 91.2{\scriptsize$\pm$2.0} & 96.0{\scriptsize$\pm$0.7} & 96.4{\scriptsize$\pm$0.6} & 52.3{\scriptsize$\pm$1.3} & 61.9{\scriptsize$\pm$1.1} & 67.1{\scriptsize$\pm$0.9} & 83.15{\scriptsize$\pm$1.2} & 9.0 \\
+\quad Rank-ProbCover + influence & 91.1{\scriptsize$\pm$1.9} & 94.6{\scriptsize$\pm$1.2} & 95.4{\scriptsize$\pm$1.1} & 93.7{\scriptsize$\pm$1.5} & 96.0{\scriptsize$\pm$0.8} & 96.5{\scriptsize$\pm$0.6} & 54.1{\scriptsize$\pm$1.1} & 63.2{\scriptsize$\pm$0.9} & 68.2{\scriptsize$\pm$0.7} & 83.63{\scriptsize$\pm$1.1} & 7.6 \\
+\quad TypiClust + influence & 93.2{\scriptsize$\pm$1.1} & \textbf{95.4}{\scriptsize$\pm$1.0} & 95.2{\scriptsize$\pm$1.1} & \textbf{95.7}{\scriptsize$\pm$0.7} & \textbf{96.4}{\scriptsize$\pm$0.6} & 96.5{\scriptsize$\pm$0.6} & 59.1{\scriptsize$\pm$1.1} & 66.8{\scriptsize$\pm$0.7} & 68.6{\scriptsize$\pm$0.7} & 85.23{\scriptsize$\pm$0.9} & 3.9 \\
+\quad MaxHerding + influence & 92.0{\scriptsize$\pm$1.4} & 95.0{\scriptsize$\pm$1.0} & \textbf{95.5}{\scriptsize$\pm$0.9} & 95.1{\scriptsize$\pm$1.0} & \textbf{96.4}{\scriptsize$\pm$0.6} & \textbf{96.6}{\scriptsize$\pm$0.6} & 58.0{\scriptsize$\pm$0.9} & \textbf{67.0}{\scriptsize$\pm$0.7} & \textbf{68.8}{\scriptsize$\pm$0.6} & 84.95{\scriptsize$\pm$0.9} & \textbf{3.8} \\
+\multicolumn{12}{l}{\textit{Switch rule of the TCM authors (post hoc)}} \\
+\quad TCM (authors' rule)~\cite{doucet2024bridging} & \textbf{93.4}{\scriptsize$\pm$1.4} & 94.2{\scriptsize$\pm$1.5} & 95.0{\scriptsize$\pm$1.3} & 94.4{\scriptsize$\pm$0.8} & 96.0{\scriptsize$\pm$0.6} & 96.5{\scriptsize$\pm$0.6} & 62.8{\scriptsize$\pm$0.9} & 66.9{\scriptsize$\pm$0.8} & 68.4{\scriptsize$\pm$0.6} & \textbf{85.29}{\scriptsize$\pm$0.9} & 5.9 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

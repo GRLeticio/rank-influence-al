@@ -1,0 +1,46 @@
+% gerado por analysis/make_tables.py -- nao editar a mao
+\begin{table*}[t]
+\centering
+\caption{Accuracy (\%) with original ranked lists, averaged over descriptors and GCNs (54 configurations). Avg.: mean accuracy; Rank: mean rank over configurations (lower is better); best in bold. The last block (switch rule of the TCM authors) was chosen after the main results.}
+\label{tab:sota-none}
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Flowers-17} & \multicolumn{3}{c}{Corel5k} & \multicolumn{3}{c}{CUB-200} & & \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+Method & \multicolumn{1}{c}{2\%} & \multicolumn{1}{c}{5\%} & \multicolumn{1}{c}{10\%} & \multicolumn{1}{c}{2\%} & \multicolumn{1}{c}{5\%} & \multicolumn{1}{c}{10\%} & \multicolumn{1}{c}{2\%} & \multicolumn{1}{c}{5\%} & \multicolumn{1}{c}{10\%} & \multicolumn{1}{c}{Avg.} & \multicolumn{1}{c}{Rank} \\
+\midrule
+\multicolumn{12}{l}{\textit{Reference}} \\
+\quad Random & 74.9 & 91.5 & 94.0 & 77.9 & 93.4 & 95.5 & 44.1 & 61.1 & 68.7 & 77.91 & 19.0 \\
+\quad Margin~\cite{scheffer2001active} & 86.8 & 93.7 & 95.0 & 85.6 & 95.1 & 96.6 & 44.4 & 61.2 & 69.5 & 80.87 & 14.0 \\
+\multicolumn{12}{l}{\textit{Coverage (whole budget)}} \\
+\quad ProbCover~\cite{yehuda2022active} & 80.0 & 89.4 & 93.9 & 80.9 & 94.2 & 95.8 & 51.8 & 64.3 & 69.8 & 80.01 & 17.2 \\
+\quad TypiClust~\cite{hacohen2022active} & 91.7 & 93.1 & 93.8 & 93.8 & 95.4 & 95.5 & 62.7 & 68.4 & 70.5 & 84.99 & 10.4 \\
+\quad MaxHerding~\cite{bae2024generalized} & \textbf{91.9} & 93.4 & 94.3 & 94.1 & 95.2 & 96.0 & \textbf{64.1} & 68.4 & 70.5 & 85.33 & 9.3 \\
+\quad Rank-ProbCover & 89.7 & 93.3 & 94.2 & 92.3 & 95.5 & 96.4 & 55.4 & 64.4 & 68.9 & 83.36 & 12.0 \\
+\multicolumn{12}{l}{\textit{Graph AL (whole budget)}} \\
+\quad RIM~\cite{zhang2021rim} & 89.9 & 92.5 & 94.3 & 91.2 & 94.4 & 95.8 & 56.3 & 62.7 & 66.6 & 82.63 & 14.6 \\
+\quad RIM (median $\theta$)~\cite{zhang2021rim} & 90.1 & 93.0 & 94.2 & 92.2 & 94.9 & 95.9 & 56.3 & 64.8 & 67.3 & 83.20 & 13.2 \\
+\quad Grain~\cite{zhang2021grain} & 89.2 & 92.3 & 94.0 & 90.9 & 94.0 & 95.6 & 54.9 & 62.0 & 66.5 & 82.15 & 16.0 \\
+\multicolumn{12}{l}{\textit{Random start + query}} \\
+\quad CoreSet~\cite{sener2017active} & 76.3 & 93.4 & 94.4 & 75.1 & 93.4 & 95.8 & 36.2 & 55.0 & 66.5 & 76.24 & 18.8 \\
+\quad Information density~\cite{settles2008analysis} & 83.5 & 92.9 & 94.9 & 79.3 & 94.6 & 96.6 & 38.7 & 58.1 & 68.9 & 78.61 & 15.6 \\
+\quad AGE~\cite{cai2017active} & 69.2 & 90.9 & 94.0 & 70.8 & 93.4 & 95.3 & 42.7 & 60.4 & 68.8 & 76.15 & 19.3 \\
+\multicolumn{12}{l}{\textit{Coverage + query}} \\
+\quad TCM ($B/2$ switch)~\cite{doucet2024bridging} & 89.9 & 93.7 & 95.1 & 91.8 & 95.8 & 96.7 & 54.5 & 67.5 & 71.5 & 84.07 & 8.8 \\
+\quad DCoM~\cite{mishal2024dcom} & 91.3 & 93.4 & 94.9 & 90.5 & 95.6 & 96.5 & 54.1 & 65.9 & 70.9 & 83.67 & 10.9 \\
+\quad MaxHerding + margin & 89.1 & 93.6 & 95.1 & 92.9 & 95.8 & 96.7 & 53.8 & 67.7 & 71.5 & 84.03 & 8.6 \\
+\quad Rank-ProbCover + margin & 86.2 & 93.1 & 95.0 & 90.5 & 95.9 & 96.8 & 47.9 & 64.3 & 70.6 & 82.26 & 11.4 \\
+\multicolumn{12}{l}{\textit{Influence (ours)}} \\
+\quad Random + influence & 90.2 & 94.2 & 95.3 & 90.7 & 96.1 & 96.9 & 50.4 & 64.1 & 70.8 & 83.19 & 8.8 \\
+\quad Rank-ProbCover + influence & 89.6 & 93.9 & 95.3 & 93.9 & \textbf{96.5} & 96.9 & 52.2 & 66.5 & \textbf{71.9} & 84.07 & 6.1 \\
+\quad TypiClust + influence & 91.5 & \textbf{94.3} & 95.1 & 94.9 & 96.4 & 96.9 & 57.9 & 68.2 & 71.7 & 85.22 & 4.4 \\
+\quad MaxHerding + influence & 90.8 & 94.1 & 95.3 & \textbf{95.0} & 96.3 & \textbf{97.0} & 56.6 & \textbf{68.7} & \textbf{71.9} & 85.07 & \textbf{4.0} \\
+\multicolumn{12}{l}{\textit{Switch rule of the TCM authors (post hoc)}} \\
+\quad TCM (authors' rule)~\cite{doucet2024bridging} & 91.7 & 93.2 & 95.0 & 93.8 & 95.7 & 96.8 & 62.7 & 68.4 & 71.6 & 85.43 & 6.4 \\
+\quad TypiClust + influence (authors' rule) & 91.7 & 93.9 & \textbf{95.5} & 93.8 & 96.2 & 96.9 & 62.7 & 68.4 & \textbf{71.9} & \textbf{85.66} & 4.4 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

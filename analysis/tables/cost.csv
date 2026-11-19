@@ -1,0 +1,16 @@
+group,method,corel5k,cub200
+Cold start,Random,0.0000,0.0000
+Cold start,Rank-ProbCover,0.1410,0.6350
+Cold start,ProbCover,0.1030,0.3190
+Cold start,DCoM,0.1730,0.4720
+Cold start,MaxHerding,0.2360,2.2300
+Cold start,RIM,0.6270,3.3690
+Cold start,Grain,1.0790,5.2050
+Cold start,TypiClust,34.8780,146.4280
+One query round,Margin,0.0020,0.0160
+One query round,CoreSet,0.0120,0.0300
+One query round,Influence (ours),0.0240,0.1020
+One query round,Information density,0.0760,0.1930
+One query round,DCoM,0.2510,0.9850
+One query round,AGE,0.3480,4.3800
+Reference,One GCN training,1.1250,2.1080

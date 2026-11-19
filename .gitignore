@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+venv/
+datasets/
+# new runs (the shipped results are in results/*_server/)
+results/*
+!results/*_server/
+results/*_server/*
+!results/*_server/results.csv
+analysis/qualitative_images/
+figures/*.pdf
+figures/*.png
